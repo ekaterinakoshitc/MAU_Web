@@ -21,3 +21,13 @@ form
     justify-content: center;
     gap: 10px;
 }
+
+.input_error
+{
+    border-color: #c12037;
+}
+
+.error_message
+{
+    color: #c12037;
+}

@@ -20,9 +20,35 @@
   </select>
   <br>
   <br>
-
   <input type="submit" value="Зарегестрироваться"/>
 </form>
 </div>
+<script type="text/javascript">
+  const nameInputText = document.querySelector("#name_input")
+  let inputNameValue;
+  nameInputText.addEventListener("input", ()=>
+  {
+    inputNameValue=nameInputText.value
+    console.log(inputNameValue);
+  })
+
+  nameInputText.addEventListener("blur",()=>
+  {
+   if (!inputNameValue || inputNameValue.length<2)
+   {
+      nameInputText.className="input_error"
+      const p = document.createElement("p")
+      p.className= "error_message"
+      document.querySelector("#name_input").append("Введите корректное имя", p);
+   }
+
+  })
+
+  nameInputText.addEventListener("focus",()=>
+  {
+      document.createElement("#name_input > p").remove()
+  })
+</script>
+
 </body>
 </html>
