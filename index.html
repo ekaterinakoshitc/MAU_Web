@@ -8,16 +8,27 @@
 <body>
 <div class="container">
 <h1>Форма регистрации</h1>
-<form>
-  <label for="name_input">Имя пользователя</label>
-  <input id="name_input" type = "text" placeholder="Имя"/>
-  <label for="password_input">Пароль</label>
-  <input id="password_input" type = "password" placeholder="Пароль"/>
-  <label for="sex_input">Пол</label>
-  <select id="sex_input">
-    <option value="m">Мужской</option>
-    <option value="w">Женский</option>
-  </select>
+<form action="/registration" method="post">
+  <div>
+    <label for="name_input">Имя пользователя</label>
+    <br>
+    <input id="name_input" type = "text" placeholder="Имя" name="username"/>
+  </div>
+  <div>
+    <label for="password_input">Пароль</label>
+    <br>
+    <input id="password_input" type = "password" placeholder="Пароль" name="userpassword"/>
+  </div>
+
+  <div>
+    <label for="sex_input">Пол</label>
+    <br>
+
+    <select id="sex_input" >
+      <option value="m">Мужской</option>
+      <option value="w">Женский</option>
+    </select>
+  </div>
   <br>
   <br>
   <input type="submit" value="Зарегестрироваться"/>
