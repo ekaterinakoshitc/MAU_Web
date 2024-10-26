@@ -1,12 +1,31 @@
+
+body
+{
+    background-image: url('../img/back2.jpg'); /* Укажите правильный путь к изображению */
+    background-size: cover; /* Заполнить всю область без искажения */
+    background-position: center; /* Центрировать изображение */
+    background-repeat: no-repeat; /* Не повторять изображение */
+    height: 100vh; /* Занять всю высоту окна */
+
+}
+
 .container
 {
+
     width: 100%;
-    height: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
 
     align-items: center;
     justify-content: center;
+
+    background: rgba(138, 126, 206, 0.93);
+    border-radius: 10px;
+    margin-top: 100px;
+    hyphens: manual;
+    justify-content: center;
+    text-align: center;
 
 }
 
@@ -16,12 +35,24 @@ form
     height: 100%;
     display: flex;
     flex-direction: column;
-
+    font-size: 20px;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
+input, select {
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
+/* Стиль для контейнера, чтобы все элементы выглядели одинаково */
+.select-wrapper {
+    position: relative;
+    width: 100%; /* Ширина как у input */
+}
 .input_error
 {
     border-color: #c12037;
